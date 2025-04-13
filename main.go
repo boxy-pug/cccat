@@ -22,7 +22,7 @@ func main() {
 			if strings.HasPrefix(strings.TrimSpace(arg), "-") {
 				continue
 			}
-			fmt.Printf("Parsing file: %s\n", arg)
+			//fmt.Printf("Parsing file: %s\n", arg)
 			file, err := os.Open(arg)
 			if err != nil {
 				fmt.Printf("error opening %s: %v\n", arg, err)
@@ -31,7 +31,6 @@ func main() {
 			catInput(file)
 		}
 	}
-
 }
 
 func catInput(file *os.File) {
